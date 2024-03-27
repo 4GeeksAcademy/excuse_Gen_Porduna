@@ -35,18 +35,29 @@ let generateExcuse = () => {
     "ages ago."
   ];
 
-  let whoIndex = Math.floor(Math.random() * 5);
-  let actionIndex = Math.floor(Math.random() * 5);
-  let thingIndex = Math.floor(Math.random() * 5);
-  let whenIndex = Math.floor(Math.random() * 5);
+  // Solución #1
 
-  return (
-    who[whoIndex] +
-    " " +
-    action[actionIndex] +
-    " " +
-    thing[thingIndex] +
-    " " +
-    when[whenIndex]
-  );
+  // let whoIndex = Math.floor(Math.random() * who.length);
+  // let actionIndex = Math.floor(Math.random() * action.length);
+  // let thingIndex = Math.floor(Math.random() * thing.length);
+  // let whenIndex = Math.floor(Math.random() * when.length);
+
+  // return (
+  //   who[whoIndex] +
+  //   " " +
+  //   action[actionIndex] +
+  //   " " +
+  //   thing[thingIndex] +
+  //   " " +
+  //   when[whenIndex]
+  // );
+
+  // Solución #2
+
+  let arrayExcusas = [who, action, thing, when];
+  arrayExcusas.map(elementoArray => {
+    return elementoArray[Math.floor(math.random() * elementoArray.lenght)];
+  });
+
+  return excusa.join(" ");
 };
