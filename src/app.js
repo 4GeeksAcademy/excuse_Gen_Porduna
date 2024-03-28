@@ -54,10 +54,11 @@ let generateExcuse = () => {
 
   // Solución #2
 
-  let arrayExcusas = [who, action, thing, when];
-  arrayExcusas.map(elementoArray => {
-    return elementoArray[Math.floor(math.random() * elementoArray.lenght)];
-  });
+  let arrayExcusas = [who, action, thing, when, ];
+
+  let excusa = arrayExcusas.map ( (elementoArray) => {
+    return elementoArray [Math.floor (Math.random() * elementoArray.length)];
+  })
 
   return excusa.join(" ");
 };
